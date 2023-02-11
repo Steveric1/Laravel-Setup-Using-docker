@@ -110,9 +110,8 @@
 #### When you run docker-compose up for the first time, it will download all of the necessary Docker images, which might take a while. Once the images are downloaded and stored in your local machine, Compose will create your containers. The -d flag daemonizes the process, running your containers in the background.
 #### We’ll now use docker-compose exec to set the application key for the Laravel application. The docker-compose exec command allows you to run specific commands in containers.
 #### The following command will generate a key and copy it to your .env file, ensuring that your user sessions and encrypted data remain secure:
-         sudo docker-compose exec app php artisan key:generateInside the container, log into the MySQL root administrative account:
-         and
-         docker-compose exec app php artisan config:cache
+         sudo docker-compose exec app php artisan key:generate
+         sudo docker-compose exec app php artisan config:cache
 #### Step - 6 Creating a User for MySQL
 #### The default MySQL installation only creates the root administrative account, which has unlimited privileges on the database server. In general, it’s better to avoid using the root administrative account when interacting with the database. Instead, we'll create a dedicated database user for our application’s Laravel database.
 #### To create a new user, execute an interactive bash shell on the db container with docker-compose exec:
