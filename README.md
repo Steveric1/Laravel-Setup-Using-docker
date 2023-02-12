@@ -127,7 +127,7 @@
 ## Step - 7 Migration, composer install and composer update
  #### Run the below commands
         sudo docker-compose exec app composer install
-        sudo docker-composer exec app composer update
+        sudo docker-compose exec app composer update
         sudo docker-compose exec app php artisan migrate
  ## Conclusion
  #### With this README, you will able to setup laravel with docker and understand how to use docker. 
